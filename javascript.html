@@ -7,6 +7,48 @@
     <title>Javascript feladatok</title>
 </head>
 <body>
+    <!-- <p>1. feladat</p>
+    <img id="kepValtoztatni" src="kepek/junimo.png" alt="junimo" title="junimo">
+    <button onclick="kepValtoztat()">Másik kép</button>
+    <script>
+        var image = document.getElementById('kepValtoztatni');
     
+        image.addEventListener('click', function(){
+            changeImage()
+        });
+    
+        function kepValtoztat(){
+            src="kep"
+        }
+    </script>
+    <script src="feladatok.js"></script> -->
+
+    <p>2. feladat</p>
+    <p>Milyen hosszú a kocka éle?</p>
+    <label for="a">a = </label><input type="text" id="a"><br>
+    <button onclick="felszinSzamolKattint();">Felszín számolása</button>
+    <button onclick="terfogatSzamolKattint();">Térfogat számolása</button>
+    <button onclick="felszinTerfogatSzamolKattint();">Egyszerre írd ki mindkettőt!</button>
+    <p id="eredmeny"></p>
+    <script>
+        function felszinSzamolKattint(){
+            var a = document.getElementById('a').value;
+            var felszin = felszinSzamol(a);
+            document.getElementById('eredmeny').innerHTML = "Kocka felszíne: " + felszin;
+        }
+        function terfogatSzamolKattint(){
+            var a = document.getElementById('a').value;
+            var terfogat = terfogatSzamol(a);
+            document.getElementById('eredmeny').innerHTML = "Kocka térfogata: " + terfogat;
+        }
+        function felszinTerfogatSzamolKattint(){
+            var a = document.getElementById('a').value;
+            var felszin = felszinSzamol(a);
+            var terfogat = terfogatSzamol(a);
+            document.getElementById('eredmeny').innerHTML = "Kocka felszíne: " + felszin + ", térfogata: " + terfogat;
+        }
+    </script>
+
+    <script src="feladatok.js"></script>
 </body>
 </html>
