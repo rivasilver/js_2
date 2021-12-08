@@ -72,8 +72,23 @@
         }
     </script>
 
+    <p>5. feladat</p>
+    <label for="elso">Első szám: </label><input type="text" id="elso"><br>
+    <label for="masodik">Második szám: </label><input type="text" id="masodik"><br><br>
+    <button onclick="ketSzamKattint();">Két szám közötti egész számok összeadása</button>
+    <p id="ketszam"></p>
+    <script>
+        function ketSzamKattint(){
+            var elso = document.getElementById('elso').value;
+            var masodik = document.getElementById('masodik').value;
+            var ketszam = ketSzamSzamol(elso, masodik);
+            document.getElementById('ketszam').innerHTML = "Két szám közötti egész számok összege: " + ketszam;
+        }
+    </script>
+
     <script src="kocka.js"></script>
     <script src="eletkor.js"></script>
     <script src="szamok.js"></script>
+    <script src="ketszam.js"></script>
 </body>
 </html>
