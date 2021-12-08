@@ -25,7 +25,7 @@
 
     <p>2. feladat</p>
     <p>Milyen hosszú a kocka éle?</p>
-    <label for="a">a = </label><input type="text" id="a"><br>
+    <label for="a">a = </label><input type="text" id="a"><br><br>
     <button onclick="felszinSzamolKattint();">Felszín számolása</button>
     <button onclick="terfogatSzamolKattint();">Térfogat számolása</button>
     <button onclick="felszinTerfogatSzamolKattint();">Egyszerre írd ki mindkettőt!</button>
@@ -49,6 +49,19 @@
         }
     </script>
 
-    <script src="feladatok.js"></script>
+    <p>3. feladat</p>
+    <label for="kor">Életkor: </label><input type="text" id="kor"><br><br>
+    <button onclick="eletkorKattint();">Életkori szakasz kiírása</button>
+    <p id="eletkor"></p>
+    <script>
+        function eletkorKattint(){
+            var kor = document.getElementById('kor').value;
+            var eletkor = eletkorSzamol(kor);
+            document.getElementById('eletkor').innerHTML = "Életkori szakasz: " + eletkor;
+        }
+    </script>
+
+    <script src="kocka.js"></script>
+    <script src="eletkor.js"></script>
 </body>
 </html>
