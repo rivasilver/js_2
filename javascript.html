@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript feladatok</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- <p>1. feladat</p>
@@ -61,7 +62,18 @@
         }
     </script>
 
+    <p>4. feladat</p>
+    <button onclick="szamKattint();">Számok kiíratása</button>
+    <p id="szamok"></p>
+    <script>
+        function szamKattint(){
+            var szamok = szamKiir();
+            document.getElementById('szamok').innerHTML = szamok;
+        }
+    </script>
+
     <script src="kocka.js"></script>
     <script src="eletkor.js"></script>
+    <script src="szamok.js"></script>
 </body>
 </html>

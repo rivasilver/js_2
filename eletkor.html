@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Életkori szakaszok</title>
+</head>
+<body>
+    <p>3. feladat</p>
+    <label for="kor">Életkor: </label><input type="text" id="kor"><br><br>
+    <button onclick="eletkorKattint();">Életkori szakasz kiírása</button>
+    <p id="eletkor"></p>
+    <script>
+        function eletkorKattint(){
+            var kor = document.getElementById('kor').value;
+            var eletkor = eletkorSzamol(kor);
+            document.getElementById('eletkor').innerHTML = "Életkori szakasz: " + eletkor;
+        }
+    </script>
+    <script src="eletkor.js"></script>
+</body>
+</html>
